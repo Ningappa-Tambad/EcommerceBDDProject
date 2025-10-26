@@ -6,6 +6,7 @@ Feature: Data Table Example
     Given User is on the login page
       | username | John    |
       | password | jOHN123 |
+      | pin      | 1234    |
 
 
 
