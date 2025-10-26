@@ -6,6 +6,7 @@ import io.cucumber.java.DataTableType;
 import io.cucumber.java.PendingException;
 import io.cucumber.java.Transpose;
 import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
 
 import java.util.List;
 import java.util.Map;
@@ -30,4 +31,7 @@ public Customer convertCustomer(DataTable dataTable) {
 
 
     }
-}
+
+
+    }
+

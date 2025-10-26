@@ -8,6 +8,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
+import java.nio.charset.StandardCharsets;
+
 public class StorePage extends BasePage
 {
 
@@ -21,7 +23,12 @@ public StorePage(WebDriver driver) {
 
     public void addToCart(String productName) throws InterruptedException {
 
-      By addToCartButton=By.cssSelector("a[aria-label='Add “"+productName+"” to your cart']");
+       String raw="a[aria-label='Add “"+productName+"” to your cart']";
+
+       byte[] bytes=raw.getBytes(StandardCharsets.UTF_8);
+         String encodedString=new String(bytes,StandardCharsets.UTF_8);
+         By addToCartButton=By.cssSelector(encodedString);
+
        wait.until(ExpectedConditions.elementToBeClickable(addToCartButton)).click();
        wait.until(ExpectedConditions.elementToBeClickable(viewCartLink)).click();
 

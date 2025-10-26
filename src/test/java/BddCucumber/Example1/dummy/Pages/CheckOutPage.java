@@ -27,6 +27,10 @@ public class CheckOutPage extends BasePage
     @FindBy(id="place_order") private WebElement placeOrderButton;
     @FindBy(xpath="//p[text()='Thank you. Your order has been received.']") private WebElement orderConfirmationMessage;
 
+
+    private final By overlay=By.cssSelector(".blockUI.blockOverlay");
+
+
     public CheckOutPage enterBillingFirstName(String billingFirstName)
     {
         WebElement firstname=wait.until(ExpectedConditions.visibilityOf(billingfirstNameField));
@@ -105,21 +109,22 @@ public class CheckOutPage extends BasePage
 
     public CheckOutPage setBilingDetails(BillingDetails billingDetails)
     {
-        return enterBillingFirstName(billingDetails.getBillingFirstName()).
-                enterBillingLastName(billingDetails.getBillingLastName()).
-                enterBillingPhone(billingDetails.getBillingPhone()).
-                selectBillingCountry(billingDetails.getBillingCountry()).
-                enterBillingAddress(billingDetails.getBillingAddress()).
-                enterBillingCity(billingDetails.getBillingCity()).
-                selectBillingState(billingDetails.getBillingState()).
-                enterBillingPostcode(billingDetails.getBillingZipcode()).
-                enterBillingEmail(billingDetails.getBillingEmail());
+        return enterBillingFirstName(billingDetails.getFirstname()).
+                enterBillingLastName(billingDetails.getLastname()).
+                selectBillingCountry(billingDetails.getCountry()).
+                enterBillingAddress(billingDetails.getAddress()).
+                enterBillingCity(billingDetails.getCity()).
+                selectBillingState(billingDetails.getState()).
+                enterBillingPostcode(billingDetails.getZip_code()).
+                enterBillingPhone(billingDetails.getPhone()).
+                enterBillingEmail(billingDetails.getEmail());
 
     }
 
 
     public CheckOutPage placeOrder()
     {
+       WaitForOverlayToDisappear(overlay);
         wait.until(ExpectedConditions.elementToBeClickable(placeOrderButton)).click();
         return this;
     }

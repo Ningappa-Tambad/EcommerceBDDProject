@@ -2,7 +2,7 @@
 Feature: Place an order
 
 
-  @scenario2
+  @scenario3
   Scenario: Guest place an order using default payment option
    Given I am guest customer
     When I add "Blue Shoes" to the cart

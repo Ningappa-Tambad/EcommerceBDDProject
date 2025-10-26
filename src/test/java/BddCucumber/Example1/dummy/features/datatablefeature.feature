@@ -1,7 +1,7 @@
 Feature: Data Table Example
 
 
-  @scenario8
+  @smoke
   Scenario: SINGLE COLUM WITH  HEADER
     Given User is on the login page
       | username | John    |

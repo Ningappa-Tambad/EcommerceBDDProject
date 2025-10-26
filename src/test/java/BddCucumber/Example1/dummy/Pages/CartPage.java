@@ -1,5 +1,6 @@
 package BddCucumber.Example1.dummy.Pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -8,6 +9,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class CartPage extends BasePage
 {
+
     public CartPage(WebDriver driver) {
         super(driver);
     }
@@ -15,11 +17,14 @@ public class CartPage extends BasePage
     @FindBy(xpath="//td[@class='product-name']")
     public WebElement productNameInCart;
 
-    @FindBy(xpath="//td[@class='product-price']/span")
+    @FindBy(xpath="//input[@type='number']")
     public WebElement productQty;
 
     @FindBy(css=".checkout-button")
     public WebElement proceedToCheckoutBtn;
+
+    private final By overlay=By.cssSelector(".blockUI.blockOverlay");
+
 
     public String getProductNameInCart()
     {
@@ -34,6 +39,7 @@ public class CartPage extends BasePage
 
     public void verifyProceedToCheckoutButtonIsClciked()
     {
+        WaitForOverlayToDisappear(overlay);
         wait.until(ExpectedConditions.elementToBeClickable(proceedToCheckoutBtn)).click();
     }
 

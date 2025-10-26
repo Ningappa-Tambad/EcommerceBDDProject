@@ -1,111 +1,105 @@
 package BddCucumber.Example1.dummy.DomainObject;
 
 public class BillingDetails
+
+
 {
-    private String billingFirstName;
-    private String billingLastName;
-    private String billingCompanyName;
-    private String billingEmail;
-    private String billingPhone;
-    private String billingCountry;
-    private String billingAddress;
-    private String billingCity;
-    private String billingState;
-    private String billingZipcode;
+    private String firstname;
+    private String lastname;
+    private String country;
+    private String address;
+    private String city;
+    private String state;
+    private String zip_code;
+    private String phone;
+    private String email;
 
-    public BillingDetails(String billingFirstName, String billingLastName, String billingCompanyName,
-                          String billingEmail, String billingPhone,
-                          String billingCountry, String billingAddress, String billingCity, String billingState, String billingZipcode) {
-        this.billingFirstName = billingFirstName;
-        this.billingLastName = billingLastName;
-        this.billingCompanyName = billingCompanyName;
-        this.billingEmail = billingEmail;
-        this.billingPhone = billingPhone;
-        this.billingCountry = billingCountry;
-        this.billingAddress = billingAddress;
-        this.billingCity = billingCity;
-        this.billingState = billingState;
-        this.billingZipcode = billingZipcode;
+    public BillingDetails(String firstname, String lastname, String country,
+                          String address, String city, String state,
+                          String zip_code, String phone, String email) {
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.country = country;
+        this.address = address;
+        this.city = city;
+        this.state = state;
+        this.zip_code = zip_code;
+        this.phone = phone;
+        this.email = email;
     }
 
 
-    public String getBillingFirstName() {
-        return billingFirstName;
+    public String getFirstname() {
+        return firstname;
     }
 
-    public void setBillingFirstName(String billingFirstName) {
-        this.billingFirstName = billingFirstName;
+    public void setFirstname(String firstname) {
+        this.firstname = firstname;
     }
 
-    public String getBillingLastName() {
-        return billingLastName;
+    public String getLastname() {
+        return lastname;
     }
 
-    public void setBillingLastName(String billingLastName) {
-        this.billingLastName = billingLastName;
+    public void setLastname(String lastname) {
+        this.lastname = lastname;
     }
 
-    public String getBillingCompanyName() {
-        return billingCompanyName;
+    public String getCountry() {
+        return country;
     }
 
-    public void setBillingCompanyName(String billingCompanyName) {
-        this.billingCompanyName = billingCompanyName;
+    public void setCountry(String country) {
+        this.country = country;
     }
 
-    public String getBillingEmail() {
-        return billingEmail;
+    public String getAddress() {
+        return address;
     }
 
-    public void setBillingEmail(String billingEmail) {
-        this.billingEmail = billingEmail;
+    public void setAddress(String address) {
+        this.address = address;
     }
 
-    public String getBillingPhone() {
-        return billingPhone;
+    public String getCity() {
+        return city;
     }
 
-    public void setBillingPhone(String billingPhone) {
-        this.billingPhone = billingPhone;
+    public void setCity(String city) {
+        this.city = city;
     }
 
-    public String getBillingAddress() {
-        return billingAddress;
+    public String getState() {
+        return state;
     }
 
-    public void setBillingAddress(String billingAddress) {
-        this.billingAddress = billingAddress;
+    public void setState(String state) {
+        this.state = state;
     }
 
-    public String getBillingCity() {
-        return billingCity;
+    public String getZip_code() {
+        return zip_code;
     }
 
-    public void setBillingCity(String billingCity) {
-        this.billingCity = billingCity;
+    public void setZip_code(String zip_code) {
+        this.zip_code = zip_code;
     }
 
-    public String getBillingCountry() {
-        return billingCountry;
+    public String getPhone() {
+        return phone;
     }
 
-    public void setBillingCountry(String billingCountry) {
-        this.billingCountry = billingCountry;
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 
-    public String getBillingState() {
-        return billingState;
+    public String getEmail() {
+        return email;
     }
 
-    public void setBillingState(String billingState) {
-        this.billingState = billingState;
-    }
-
-    public String getBillingZipcode() {
-        return billingZipcode;
-    }
-
-    public void setBillingZipcode(String billingZipcode) {
-        this.billingZipcode = billingZipcode;
+    public void setEmail(String email) {
+        this.email = email;
     }
 }
+
+
