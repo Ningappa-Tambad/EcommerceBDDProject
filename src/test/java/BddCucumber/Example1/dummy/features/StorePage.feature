@@ -10,7 +10,7 @@ Feature: Add to Cart Functionality
 
   Examples:
     | Product name  |
-    | Blue Shoes   |
+    | Blue Shoes    |
 
 
 
