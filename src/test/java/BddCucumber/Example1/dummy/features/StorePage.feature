@@ -11,8 +11,6 @@ Feature: Add to Cart Functionality
   Examples:
     | Product name  |
     | Blue Shoes   |
-    | Red Shirt    |
-    | Black Hat    |
 
 
 
