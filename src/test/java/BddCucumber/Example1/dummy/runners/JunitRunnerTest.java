@@ -12,7 +12,7 @@ import static io.cucumber.junit.CucumberOptions.SnippetType.CAMELCASE;
 @CucumberOptions(
         plugin = {"pretty", "summary"},
         features = "src/test/java/BddCucumber/Example1/dummy",
-        glue = {"BddCucumber.Example1.dummy"},
+        glue = {"BddCucumber.Ex ample1.dummy"},
         tags = "@smoke"
 
 

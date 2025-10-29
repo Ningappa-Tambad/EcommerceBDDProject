@@ -11,7 +11,7 @@ public class DriverFactory
 
     public static WebDriver initilizeWebDriver(String browser)
     {
-   WebDriver driver;
+         WebDriver driver;
         switch(browser)
         {
             case "chrome":
